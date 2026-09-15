@@ -246,7 +246,10 @@ p { margin: 0; }
 /* imagem que ocupa o quadro inteiro do cartão, como a foto do Backstage */
 .produto__visual:has(.foto-produto) { padding: 0; }
 .foto-produto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.produto--checkinpass .foto-produto { object-position: 42% 40%; }
+/* CheckinPass: a arte vai inteira, sem corte; as faixas que sobram usam as
+   cores das bordas da própria imagem para emendar. */
+.produto--checkinpass .produto__visual { background: linear-gradient(#080C1A, #01030B); }
+.produto--checkinpass .foto-produto { object-fit: contain; }
 
 /* janela genérica de "tela" */
 .tela { width: 100%; max-width: 440px; border-radius: 14px; border: 1px solid rgba(255,255,255,.1); overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.5); }
