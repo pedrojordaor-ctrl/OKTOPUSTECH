@@ -38,5 +38,5 @@ O campo escondido `empresa-site` é a armadilha contra robôs.
 |-----------------------------|------------------------------------------------------|
 | Texto de um produto/projeto | `index.html`, no `<article id="...">` dele           |
 | Link de um projeto          | `index.html`, a `.link-seta` do cartão               |
-| Cor de destaque (laranja)   | `assets/css/style.css`, `--coral` no `:root`         |
+| Cor de destaque (coral)     | `assets/css/style.css`, `--coral` no `:root`         |
 | Um nó do diagrama do topo   | `index.html`, `<figure class="polvo">` (braço + nó)  |
