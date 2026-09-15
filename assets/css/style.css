@@ -184,10 +184,7 @@ p { margin: 0; }
 .bracos .fluxo-braco { stroke: var(--coral); stroke-width: 2; stroke-dasharray: 3 22; opacity: .9; animation: fluir 2.4s linear infinite; }
 @keyframes fluir { to { stroke-dashoffset: -50; } }
 
-.nucleo__fundo { fill: var(--ink-1); stroke: var(--line-2); stroke-width: 1.5; }
-.nucleo__traco path { fill: none; stroke: var(--coral); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
-.nucleo__olho { fill: var(--coral); }
-.nucleo { animation: respirar 5s ease-in-out infinite; transform-origin: 280px 112px; }
+.nucleo { animation: respirar 5s ease-in-out infinite; transform-origin: 280px 90px; }
 @keyframes respirar { 50% { transform: scale(1.035); } }
 
 .no rect { fill: var(--ink-1); stroke: var(--line-2); stroke-width: 1.5; transition: fill .25s, stroke .25s; }
