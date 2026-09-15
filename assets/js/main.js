@@ -80,7 +80,6 @@
   }
 
   /* ----------------------------------------------- entrada ao rolar */
-  $$('.barras i').forEach((b, i) => b.style.setProperty('--i', i));
   const alvos = $$('.secao__cabeca, .produto, .projeto, .etapas li, .capacidades, .contato__texto, .formulario');
   if ('IntersectionObserver' in window && !semMovimento) {
     alvos.forEach((el) => el.classList.add('revelar'));
