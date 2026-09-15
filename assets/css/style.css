@@ -399,6 +399,7 @@ p { margin: 0; }
 .rodape { padding: 4rem 0 calc(2rem + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); }
 .rodape__grade { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; }
 .rodape__grade p { margin-top: 1rem; color: var(--txt-3); font-size: .9375rem; max-width: 22rem; }
+.rodape__grade .destaque { color: var(--coral); font-weight: 600; white-space: nowrap; }
 .rodape nav { display: grid; align-content: start; gap: .6rem; }
 .rodape h4 { margin: 0 0 .4rem; font: 600 .9375rem/1.2 var(--f-text); color: var(--txt); }
 .rodape nav a { color: var(--txt-2); font-size: .9375rem; }
