@@ -241,7 +241,7 @@ p { margin: 0; }
 .lista li::before { content: ""; position: absolute; left: 0; top: .62em; width: 8px; height: 8px; border-radius: 2px; background: var(--marca-lit, var(--coral)); }
 
 .produto--metryks   { --marca-lit: var(--metryks-lit); }
-.produto--backstage { --marca-lit: #FF5C9A; }
+.produto--backstage { --marca-lit: #F20A76; } /* o magenta do STAGE no logotipo */
 .produto--checkinpass { --marca-lit: var(--checkinpass); }
 
 .produto--metryks .produto__visual { background: #000; }
