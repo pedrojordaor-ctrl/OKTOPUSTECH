@@ -184,8 +184,8 @@ p { margin: 0; }
 .bracos .fluxo-braco { stroke: var(--coral); stroke-width: 2; stroke-dasharray: 3 22; opacity: .9; animation: fluir 2.4s linear infinite; }
 @keyframes fluir { to { stroke-dashoffset: -50; } }
 
-.nucleo { animation: respirar 5s ease-in-out infinite; transform-origin: 280px 90px; }
-@keyframes respirar { 50% { transform: scale(1.035); } }
+.brilho { animation: pulsar 5s ease-in-out infinite; }
+@keyframes pulsar { 50% { opacity: .6; } }
 
 .no rect { fill: var(--ink-1); stroke: var(--line-2); stroke-width: 1.5; transition: fill .25s, stroke .25s; }
 .no text { fill: var(--txt); font-family: var(--f-mono); font-size: 15px; text-anchor: middle; transition: fill .25s; }
@@ -194,7 +194,7 @@ p { margin: 0; }
 .no--voce text { fill: var(--coral-lit); }
 
 @media (prefers-reduced-motion: reduce) {
-  .bracos .fluxo-braco, .nucleo { animation: none; }
+  .bracos .fluxo-braco, .brilho { animation: none; }
 }
 
 @media (max-width: 960px) {
