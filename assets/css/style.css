@@ -227,6 +227,8 @@ p { margin: 0; }
 }
 .produto__texto { padding: clamp(1.75rem, 4vw, 3.25rem); display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
 .produto__texto h3 { font-size: clamp(2rem, 3.6vw, 2.75rem); }
+/* logotipo oficial no lugar do nome — arquivo do kit de marca, sem retoque */
+.produto__logo img { height: clamp(32px, 3.4vw, 42px); width: auto; }
 .produto__texto > p:not([class]) { color: var(--txt-2); }
 .produto__texto strong { color: var(--txt); font-weight: 600; }
 .produto__setor { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--marca-lit, var(--coral-lit)); }
