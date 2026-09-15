@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Oktopus Tech">
+  <title>Oktopus Tech</title>
+  <!-- O símbolo: uma cabeça (o núcleo) e braços que descem e se curvam para
+       fora — cada braço, um sistema. Traço, não preenchimento: é o mesmo
+       desenho que o diagrama da home usa para ligar os projetos. -->
+  <rect width="64" height="64" rx="14" fill="#070A12"/>
+  <g fill="none" stroke="#FF6B4A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 31c0-9.4 6.7-17 15-17s15 7.6 15 17"/>
+    <path d="M17 31c0 7-2 11-6 13"/>
+    <path d="M25 33c0 6-1 10-4 14"/>
+    <path d="M32 34v15"/>
+    <path d="M39 33c0 6 1 10 4 14"/>
+    <path d="M47 31c0 7 2 11 6 13"/>
+  </g>
+  <circle cx="26.5" cy="25" r="2.4" fill="#FF6B4A"/>
+  <circle cx="37.5" cy="25" r="2.4" fill="#FF6B4A"/>
+</svg>

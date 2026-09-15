@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Oktopus Tech — Sistemas e sites para quem opera de verdade</title>
+  <meta name="description" content="A Oktopus Tech cria plataformas SaaS, sistemas de gestão e sites: Metryks, Backstage, EventPass, Genuíno, Medipro Solutions, RaiZ e Octopus Holding S.A.">
+  <meta name="theme-color" content="#070A12">
+  <link rel="icon" href="assets/img/marca.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Oktopus Tech — Um núcleo. Muitos braços.">
+  <meta property="og:description" content="Plataformas SaaS, sistemas de gestão e sites que rodam o dia a dia de restaurantes, agências de eventos, bares e empresas.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Oktopus Tech",
+    "description": "Empresa de tecnologia responsável pelos sistemas Metryks, Backstage e EventPass.",
+    "parentOrganization": { "@type": "Organization", "name": "Octopus Holding S.A." }
+  }
+  </script>
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo" data-topo>
+    <div class="wrap topo__linha">
+      <a class="logo" href="#inicio" aria-label="Oktopus Tech — início">
+        <img src="assets/img/marca.svg" width="36" height="36" alt="">
+        <span>Oktopus<b>Tech</b></span>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#produtos">Produtos</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#como-trabalhamos">Como trabalhamos</a>
+        <a class="btn btn--pequeno" href="#contato">Falar com a gente</a>
+      </nav>
+
+      <button class="menu-botao" type="button" aria-controls="menu" aria-expanded="false" data-menu-botao>
+        <span class="sr">Abrir menu</span>
+        <i></i><i></i>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============================================================ HERO -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero__grade">
+        <div class="hero__texto">
+          <p class="rotulo">Software house · Grupo Octopus</p>
+          <h1>Um núcleo de tecnologia. <em>Muitos braços</em> em operação.</h1>
+          <p class="hero__lead">
+            Criamos plataformas SaaS, sistemas de gestão e sites que rodam o dia a dia
+            de restaurantes, agências de eventos, bares e empresas — do salão à diretoria.
+          </p>
+          <div class="hero__acoes">
+            <a class="btn" href="#contato">Começar um projeto</a>
+            <a class="btn btn--fantasma" href="#produtos">Ver o que já construímos</a>
+          </div>
+
+          <dl class="numeros">
+            <div><dt>3</dt><dd>plataformas SaaS próprias</dd></div>
+            <div><dt>4</dt><dd>sites e sistemas sob medida</dd></div>
+            <div><dt>1</dt><dd>time do protótipo ao ar</dd></div>
+          </dl>
+        </div>
+
+        <!-- O diagrama: o núcleo e um braço para cada projeto. O oitavo braço
+             fica pontilhado — é o do próximo cliente. Cada rótulo é um link
+             para o cartão do projeto. -->
+        <figure class="polvo" aria-label="Diagrama: a Oktopus Tech no centro, ligada aos seus sete projetos e a um oitavo, o seu.">
+          <svg viewBox="0 0 560 500" role="img" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="brilho" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FF6B4A" stop-opacity=".32"/>
+                <stop offset="100%" stop-color="#FF6B4A" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <circle cx="280" cy="112" r="120" fill="url(#brilho)"/>
+
+            <g class="bracos">
+              <path data-braco="metryks"   d="M236 150 C230 190 120 170 90 197"/>
+              <path data-braco="backstage" d="M324 150 C330 190 440 170 470 197"/>
+              <path data-braco="eventpass" d="M246 156 C238 230 70 220 62 287"/>
+              <path data-braco="genuino"   d="M314 156 C322 230 490 220 498 287"/>
+              <path data-braco="medipro"   d="M258 160 C250 290 120 300 120 377"/>
+              <path data-braco="raiz"      d="M302 160 C310 290 440 300 440 377"/>
+              <path data-braco="holding"   d="M270 162 C266 330 190 360 190 442"/>
+              <path data-braco="voce" class="braco--voce" d="M290 162 C294 330 380 360 380 442"/>
+            </g>
+
+            <g class="nucleo">
+              <circle cx="280" cy="112" r="66" class="nucleo__fundo"/>
+              <g class="nucleo__traco">
+                <path d="M244 118c0-22.5 16-40.5 36-40.5s36 18 36 40.5"/>
+                <path d="M244 118c0 9-3 15-9 18"/>
+                <path d="M258 121c0 8-1 13-5 18"/>
+                <path d="M280 122v19"/>
+                <path d="M302 121c0 8 1 13 5 18"/>
+                <path d="M316 118c0 9 3 15 9 18"/>
+              </g>
+              <circle cx="267" cy="104" r="4.5" class="nucleo__olho"/>
+              <circle cx="293" cy="104" r="4.5" class="nucleo__olho"/>
+            </g>
+
+            <g class="nos">
+              <a href="#metryks"><g class="no" data-no="metryks"><rect x="37.5" y="197" width="105" height="34" rx="17"/><text x="90" y="219">Metryks</text></g></a>
+              <a href="#backstage"><g class="no" data-no="backstage"><rect x="410" y="197" width="120" height="34" rx="17"/><text x="470" y="219">Backstage</text></g></a>
+              <a href="#eventpass"><g class="no" data-no="eventpass"><rect x="2" y="287" width="120" height="34" rx="17"/><text x="62" y="309">EventPass</text></g></a>
+              <a href="#genuino"><g class="no" data-no="genuino"><rect x="448" y="287" width="100" height="34" rx="17"/><text x="498" y="309">Genuíno</text></g></a>
+              <a href="#medipro"><g class="no" data-no="medipro"><rect x="70" y="377" width="100" height="34" rx="17"/><text x="120" y="399">Medipro</text></g></a>
+              <a href="#raiz"><g class="no" data-no="raiz"><rect x="400" y="377" width="80" height="34" rx="17"/><text x="440" y="399">RaiZ</text></g></a>
+              <a href="#holding"><g class="no" data-no="holding"><rect x="102" y="442" width="176" height="34" rx="17"/><text x="190" y="464">Octopus Holding</text></g></a>
+              <a href="#contato"><g class="no no--voce" data-no="voce"><rect x="312" y="442" width="136" height="34" rx="17"/><text x="380" y="464">o seu projeto</text></g></a>
+            </g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ======================================================== PRODUTOS -->
+    <section class="secao" id="produtos">
+      <div class="wrap">
+        <header class="secao__cabeca">
+          <p class="rotulo">Produtos próprios</p>
+          <h2>Plataformas que nasceram dentro da operação.</h2>
+          <p>Cada produto começou num problema real de um cliente real — e virou software que outras empresas do mesmo setor podem assinar.</p>
+        </header>
+
+        <div class="produtos">
+
+          <!-- METRYKS -->
+          <article class="produto produto--metryks" id="metryks">
+            <div class="produto__visual" aria-hidden="true">
+              <div class="tela tela--metryks">
+                <div class="tela__barra"><span></span><span></span><span></span><b>Tempo real · Salão</b></div>
+                <div class="mk">
+                  <div class="mk__kpi">
+                    <small>VENDAS HOJE</small>
+                    <strong>R$ 18.420</strong>
+                    <em>▲ 12% vs. terça passada</em>
+                  </div>
+                  <div class="mk__kpi">
+                    <small>CMV</small>
+                    <strong>29,4%</strong>
+                    <em class="ok">● dentro da meta</em>
+                  </div>
+                  <div class="mk__grafico">
+                    <small>Pico às 21h — cozinha acima da média</small>
+                    <div class="barras">
+                      <i style="--h:22%"></i><i style="--h:30%"></i><i style="--h:26%"></i><i style="--h:44%"></i><i style="--h:58%"></i><i style="--h:71%"></i><i style="--h:92%"></i><i style="--h:84%"></i><i style="--h:63%"></i><i style="--h:40%"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="produto__texto">
+              <p class="produto__setor">Bares e restaurantes</p>
+              <h3>Metryks</h3>
+              <p class="produto__descritor">Inteligência Operacional</p>
+              <p>Plataforma de gestão para restaurantes com duas camadas e uma costura: a <strong>Gestão</strong> — painéis em tempo real, CMV, estoque, financeiro e fiscal — e a <strong>Operação</strong>, o PDV que roda na maquininha. Cada ação no salão vira dado no painel, na hora.</p>
+              <ul class="lista">
+                <li>Comanda, divisão de conta e pagamento na mesa</li>
+                <li>KDS da cozinha e NFC-e no fechamento</li>
+                <li>Conciliação de adquirente × financeiro</li>
+                <li>Pronto para redes com várias lojas</li>
+              </ul>
+              <a class="link-seta" href="https://metrycs.com.br" target="_blank" rel="noopener">Conhecer o Metryks</a>
+            </div>
+          </article>
+
+          <!-- BACKSTAGE -->
+          <article class="produto produto--backstage produto--invertido" id="backstage">
+            <div class="produto__visual" aria-hidden="true">
+              <div class="palco">
+                <img src="assets/img/projetos/backstage-palco.jpg" alt="" loading="lazy" width="1200" height="640">
+                <div class="tela tela--backstage">
+                  <div class="tela__barra"><span></span><span></span><span></span><b>Evento · Convenção anual</b></div>
+                  <ol class="fluxo">
+                    <li class="feito"><b>Orçamento</b><small>Aprovado pelo cliente</small></li>
+                    <li class="feito"><b>Fornecedores</b><small>12 confirmados</small></li>
+                    <li class="agora"><b>Execução</b><small>Hoje, 19h</small></li>
+                    <li><b>Fechamento</b><small>Evento · fee · BV</small></li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <div class="produto__texto">
+              <p class="produto__setor">Agências de eventos</p>
+              <h3>Backstage</h3>
+              <p>SaaS multi-agência para quem produz eventos. A equipe controla clientes, fornecedores, orçamento, aprovações e fechamento num só lugar — e cada cliente e fornecedor entra no <strong>próprio portal</strong>, vendo só o que é dele.</p>
+              <ul class="lista">
+                <li>Três receitas separadas: valor do evento, fee e BV</li>
+                <li>Portais externos com isolamento total de dados</li>
+                <li>Aprovações, notificações e painéis por agência</li>
+                <li>Um único acesso, cada público na sua área</li>
+              </ul>
+              <a class="link-seta" href="https://portalbackstage.com.br" target="_blank" rel="noopener">Conhecer o Backstage</a>
+            </div>
+          </article>
+
+          <!-- EVENTPASS -->
+          <article class="produto produto--eventpass" id="eventpass">
+            <div class="produto__visual" aria-hidden="true">
+              <div class="ingresso">
+                <div class="ingresso__corpo">
+                  <small>EVENTPASS · ENTRADA</small>
+                  <strong>Noite de Lançamento</strong>
+                  <dl>
+                    <div><dt>Data</dt><dd>24 OUT</dd></div>
+                    <div><dt>Portão</dt><dd>B</dd></div>
+                    <div><dt>Setor</dt><dd>Pista</dd></div>
+                  </dl>
+                </div>
+                <div class="ingresso__canhoto">
+                  <svg class="qr" viewBox="0 0 21 21" data-qr></svg>
+                  <span class="ingresso__status">● Check-in liberado</span>
+                </div>
+              </div>
+            </div>
+            <div class="produto__texto">
+              <p class="produto__setor">Produtores e casas de evento</p>
+              <h3>EventPass</h3>
+              <p>Ingresso, credenciamento e controle de acesso na mesma plataforma. Do link de venda à leitura do QR code na porta, a produção acompanha quem comprou, quem entrou e quanto vendeu — em tempo real.</p>
+              <ul class="lista">
+                <li>Venda de ingressos e listas por lote</li>
+                <li>Check-in por QR code direto no celular</li>
+                <li>Credenciamento de equipe, imprensa e convidados</li>
+                <li>Relatório de acesso e vendas por evento</li>
+              </ul>
+              <a class="link-seta" href="#contato">Quero conhecer o EventPass</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================== PROJETOS -->
+    <section class="secao secao--faixa" id="projetos">
+      <div class="wrap">
+        <header class="secao__cabeca">
+          <p class="rotulo">Projetos sob medida</p>
+          <h2>Sites e sistemas com a cara de cada marca.</h2>
+          <p>Rápidos, fáceis de manter e bem posicionados no Google — e, quando o negócio pede, com sistema por trás.</p>
+        </header>
+
+        <div class="projetos">
+
+          <article class="projeto projeto--destaque" id="genuino">
+            <div class="projeto__foto">
+              <img src="assets/img/projetos/genuino-salao.jpg" alt="Salão do Genuíno Bar lotado em noite de samba" loading="lazy" width="1200" height="581">
+            </div>
+            <div class="projeto__texto">
+              <ul class="tags"><li>Site</li><li>Reservas</li><li>Listas de promotores</li></ul>
+              <h3>Genuíno Bar</h3>
+              <p>Site da casa de samba da Vila Mariana, com agenda, cardápio e galeria — e um sistema completo por trás: reserva de mesa online, listas de promotores com link próprio para cada um, portaria e painel para a equipe atualizar fotos e programação sem depender de ninguém.</p>
+              <a class="link-seta" href="https://www.genuinobar.com.br" target="_blank" rel="noopener">genuinobar.com.br</a>
+            </div>
+          </article>
+
+          <article class="projeto" id="medipro">
+            <div class="janela janela--medipro" aria-hidden="true">
+              <div class="janela__barra"><span></span><span></span><span></span></div>
+              <div class="janela__conteudo"><b>Medipro</b><small>Solutions</small></div>
+            </div>
+            <div class="projeto__texto">
+              <ul class="tags"><li>Site institucional</li></ul>
+              <h3>Medipro Solutions</h3>
+              <p>Presença digital institucional: apresentação clara dos serviços, credibilidade para quem pesquisa a empresa e um caminho direto até o contato comercial.</p>
+            </div>
+          </article>
+
+          <article class="projeto" id="raiz">
+            <div class="janela janela--raiz" aria-hidden="true">
+              <div class="janela__barra"><span></span><span></span><span></span></div>
+              <div class="janela__conteudo"><b>RaiZ</b><small>Eventos</small></div>
+            </div>
+            <div class="projeto__texto">
+              <ul class="tags"><li>Site institucional</li></ul>
+              <h3>RaiZ</h3>
+              <p>Site da marca de eventos: portfólio, identidade forte e orçamento a um clique, pensado para ser compartilhado e abrir bem no celular.</p>
+            </div>
+          </article>
+
+          <article class="projeto" id="holding">
+            <div class="janela janela--holding" aria-hidden="true">
+              <div class="janela__barra"><span></span><span></span><span></span></div>
+              <div class="janela__conteudo"><b>Octopus</b><small>Holding S.A.</small></div>
+            </div>
+            <div class="projeto__texto">
+              <ul class="tags"><li>Site institucional</li></ul>
+              <h3>Octopus Holding S.A.</h3>
+              <p>O site da holding do grupo: quem somos, as empresas investidas e a governança — sóbrio, direto e com a solidez que investidores e parceiros esperam.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================ COMO TRABALHAMOS -->
+    <section class="secao" id="como-trabalhamos">
+      <div class="wrap">
+        <header class="secao__cabeca">
+          <p class="rotulo">Como trabalhamos</p>
+          <h2>Primeiro a gente entende a operação. Depois escreve código.</h2>
+        </header>
+
+        <ol class="etapas">
+          <li>
+            <span class="etapa__n">01</span>
+            <h3>Imersão</h3>
+            <p>Vamos até o salão, a portaria, o escritório. Software bom fala a língua de quem usa — “conferência de caixa”, não “reconciliation process”.</p>
+          </li>
+          <li>
+            <span class="etapa__n">02</span>
+            <h3>Protótipo navegável</h3>
+            <p>Antes de qualquer banco de dados, você clica nas telas e valida o fluxo com a sua equipe. Mudar aqui custa horas, não semanas.</p>
+          </li>
+          <li>
+            <span class="etapa__n">03</span>
+            <h3>Construção com testes</h3>
+            <p>Cada regra do negócio vira teste automatizado. É o que deixa a gente mexer no sistema amanhã sem quebrar o que funciona hoje.</p>
+          </li>
+          <li>
+            <span class="etapa__n">04</span>
+            <h3>No ar e acompanhado</h3>
+            <p>Publicação, documentação entregue e acompanhamento depois do lançamento. O sistema é seu — e continua evoluindo.</p>
+          </li>
+        </ol>
+
+        <div class="capacidades">
+          <h3 class="rotulo">O que sabemos fazer bem</h3>
+          <ul>
+            <li><b>SaaS multi-empresa</b><span>Planos, permissões e dados isolados por cliente</span></li>
+            <li><b>Painéis e BI</b><span>Indicadores em tempo real com título que já diz a conclusão</span></li>
+            <li><b>Pagamentos e fiscal</b><span>Integração com maquininha, conciliação e NFC-e</span></li>
+            <li><b>Portais externos</b><span>Clientes e fornecedores com acesso só ao que é deles</span></li>
+            <li><b>Reservas e listas</b><span>Mesa, lista de promotor, convite e portaria</span></li>
+            <li><b>Sites rápidos</b><span>Leves, fáceis de editar e preparados para o Google</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= CONTATO -->
+    <section class="secao contato" id="contato">
+      <div class="wrap contato__grade">
+        <div class="contato__texto">
+          <p class="rotulo">O oitavo braço</p>
+          <h2>Qual operação vamos colocar para rodar agora?</h2>
+          <p>Conte o que você precisa — um sistema, uma plataforma ou um site. A gente responde com perguntas boas e um caminho claro, sem jargão.</p>
+        </div>
+
+        <form class="formulario" name="contato" method="POST" data-netlify="true" netlify-honeypot="empresa-site" data-formulario>
+          <input type="hidden" name="form-name" value="contato">
+          <p class="escondido"><label>Não preencha: <input name="empresa-site" tabindex="-1" autocomplete="off"></label></p>
+
+          <div class="campo">
+            <label for="f-nome">Seu nome</label>
+            <input id="f-nome" name="nome" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="f-contato">E-mail ou WhatsApp</label>
+            <input id="f-contato" name="contato" autocomplete="email" required>
+          </div>
+          <div class="campo campo--largo">
+            <label for="f-empresa">Empresa</label>
+            <input id="f-empresa" name="empresa" autocomplete="organization">
+          </div>
+
+          <fieldset class="campo campo--largo">
+            <legend>O que você precisa?</legend>
+            <div class="opcoes">
+              <label><input type="radio" name="tipo" value="Sistema sob medida" checked><span>Sistema sob medida</span></label>
+              <label><input type="radio" name="tipo" value="Site"><span>Site</span></label>
+              <label><input type="radio" name="tipo" value="Metryks"><span>Metryks</span></label>
+              <label><input type="radio" name="tipo" value="Backstage"><span>Backstage</span></label>
+              <label><input type="radio" name="tipo" value="EventPass"><span>EventPass</span></label>
+            </div>
+          </fieldset>
+
+          <div class="campo campo--largo">
+            <label for="f-mensagem">Conte um pouco do projeto</label>
+            <textarea id="f-mensagem" name="mensagem" rows="4" required></textarea>
+          </div>
+
+          <div class="formulario__rodape campo--largo">
+            <button class="btn" type="submit">Enviar mensagem</button>
+            <p class="formulario__aviso" role="status" aria-live="polite" data-aviso></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="wrap rodape__grade">
+      <div>
+        <a class="logo" href="#inicio">
+          <img src="assets/img/marca.svg" width="32" height="32" alt="">
+          <span>Oktopus<b>Tech</b></span>
+        </a>
+        <p>Empresa de tecnologia do grupo Octopus Holding S.A.</p>
+      </div>
+      <nav aria-label="Produtos">
+        <h4>Produtos</h4>
+        <a href="#metryks">Metryks</a>
+        <a href="#backstage">Backstage</a>
+        <a href="#eventpass">EventPass</a>
+      </nav>
+      <nav aria-label="Projetos">
+        <h4>Projetos</h4>
+        <a href="#genuino">Genuíno Bar</a>
+        <a href="#medipro">Medipro Solutions</a>
+        <a href="#raiz">RaiZ</a>
+        <a href="#holding">Octopus Holding S.A.</a>
+      </nav>
+    </div>
+    <div class="wrap rodape__base">
+      <small>© <span data-ano>2026</span> Oktopus Tech. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
