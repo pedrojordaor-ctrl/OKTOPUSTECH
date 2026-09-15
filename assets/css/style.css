@@ -59,6 +59,8 @@ body {
 }
 
 img { max-width: 100%; display: block; }
+/* hidden precisa vencer qualquer display de classe (ex.: o botão de WhatsApp) */
+[hidden] { display: none !important; }
 a { color: var(--coral-lit); text-decoration: none; }
 a:hover { color: var(--txt); }
 :focus-visible { outline: 2px solid var(--coral); outline-offset: 3px; border-radius: 4px; }
@@ -238,6 +240,10 @@ p { margin: 0; }
 .produto__texto strong { color: var(--txt); font-weight: 600; }
 .produto__setor { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--marca-lit, var(--coral-lit)); }
 .produto .link-seta { margin-top: auto; padding-top: .5rem; }
+.produto__acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; margin-top: auto; padding-top: .5rem; }
+.produto__acoes .link-seta { margin-top: 0; padding-top: 0; }
+.produto__acoes .btn { background: var(--marca-lit, var(--coral)); border-color: var(--marca-lit, var(--coral)); color: #05070E; }
+.produto__acoes .btn:hover { filter: brightness(1.1); box-shadow: none; }
 .produto .link-seta::after { color: var(--marca-lit); }
 .produto .link-seta:hover { border-color: var(--marca-lit); }
 
@@ -393,6 +399,9 @@ p { margin: 0; }
 .formulario__aviso { font-size: .9375rem; color: var(--txt-2); }
 .formulario__aviso.ok { color: #3DDC97; }
 .formulario__aviso.erro { color: var(--coral-lit); }
+.formulario__nota { font-size: .875rem; color: var(--txt-3); }
+.formulario__nota a { color: var(--txt-2); text-decoration: underline; text-underline-offset: 2px; }
+.formulario__nota a:hover { color: var(--txt); }
 
 @media (max-width: 860px) {
   .contato__grade { grid-template-columns: 1fr; }
@@ -411,6 +420,34 @@ p { margin: 0; }
 .rodape nav a { color: var(--txt-2); font-size: .9375rem; }
 .rodape nav a:hover { color: var(--txt); }
 .rodape__base { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); color: var(--txt-3); }
+.rodape__base a { color: var(--txt-2); margin-left: .75rem; }
+.rodape__base a:hover { color: var(--txt); }
+
+/* --------------------------------------------------- WhatsApp flutuante */
+.whats-flutuante {
+  position: fixed; z-index: 40;
+  right: calc(1rem + env(safe-area-inset-right, 0px)); bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  display: inline-flex; align-items: center; gap: .5rem;
+  min-height: 52px; padding: 0 1.1rem 0 .85rem; border-radius: 999px;
+  background: #25D366; color: #06200F; font-weight: 600;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+  transition: transform .2s var(--ease);
+}
+.whats-flutuante:hover { color: #06200F; transform: translateY(-2px); }
+@media (max-width: 520px) { .whats-flutuante span { display: none; } .whats-flutuante { padding: 0; width: 56px; justify-content: center; } }
+
+/* ------------------------------------------------------ página legal */
+.legal { padding: calc(72px + env(safe-area-inset-top, 0px) + clamp(3rem, 7vw, 5rem)) 0 var(--secao-y); }
+.legal__wrap { max-width: 760px; }
+.legal h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -.03em; }
+.legal__lead { margin-top: 1.25rem; font-size: 1.125rem; color: var(--txt-2); }
+.legal section { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.legal h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+.legal section p { color: var(--txt-2); }
+.legal section p + p { margin-top: .9rem; }
+.legal strong { color: var(--txt); font-weight: 600; }
+.legal a:not(.btn):not(.logo) { text-decoration: underline; text-underline-offset: 3px; }
+.legal__data { margin-top: 3rem; font: 500 .8125rem/1 var(--f-mono); color: var(--txt-3); }
 @media (max-width: 640px) { .rodape__grade { grid-template-columns: 1fr 1fr; } .rodape__grade > div { grid-column: 1 / -1; } }
 
 /* -------------------------------------------------- entrada ao rolar */

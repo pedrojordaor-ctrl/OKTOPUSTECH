@@ -29,3 +29,9 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# URL limpa: /privacidade em vez de /privacidade.html
+[[redirects]]
+  from = "/privacidade"
+  to = "/privacidade.html"
+  status = 200

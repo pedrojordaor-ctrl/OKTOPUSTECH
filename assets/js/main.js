@@ -1,6 +1,10 @@
 /* Oktopus Tech — comportamento do site.
    Tudo aqui é melhoria: sem JavaScript a página continua inteira e legível. */
 (() => {
+  /* Número de WhatsApp da Oktopus Tech, só dígitos, com país e DDD
+     (ex.: '5511999999999'). Vazio = botões de WhatsApp continuam escondidos. */
+  const WHATSAPP = '';
+
   const $ = (sel, raiz = document) => raiz.querySelector(sel);
   const $$ = (sel, raiz = document) => [...raiz.querySelectorAll(sel)];
   const semMovimento = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -72,34 +76,54 @@
   // aviso diz isso em vez de fingir que enviou.
   const form = $('[data-formulario]');
   const aviso = $('[data-aviso]');
-  const avisar = (texto, tipo = '') => {
-    aviso.textContent = texto;
-    aviso.className = `formulario__aviso ${tipo}`;
-  };
+  if (form) {
+    const avisar = (texto, tipo = '') => {
+      aviso.textContent = texto;
+      aviso.className = `formulario__aviso ${tipo}`;
+    };
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    if (!form.reportValidity()) return;
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
 
-    const enviar = $('button[type="submit"]', form);
-    enviar.disabled = true;
-    avisar('Enviando…');
+      const enviar = $('button[type="submit"]', form);
+      enviar.disabled = true;
+      avisar('Enviando…');
 
-    try {
-      const resposta = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(new FormData(form)).toString(),
-      });
-      if (!resposta.ok) throw new Error(String(resposta.status));
-      form.reset();
-      avisar('Mensagem recebida. Em breve a gente responde.', 'ok');
-    } catch {
-      avisar('Não conseguimos enviar agora. Tente de novo em instantes.', 'erro');
-    } finally {
-      enviar.disabled = false;
-    }
-  });
+      try {
+        const resposta = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(form)).toString(),
+        });
+        if (!resposta.ok) throw new Error(String(resposta.status));
+        form.reset();
+        avisar('Mensagem recebida. Em breve a gente responde.', 'ok');
+      } catch {
+        avisar('Não conseguimos enviar agora. Tente de novo em instantes.', 'erro');
+      } finally {
+        enviar.disabled = false;
+      }
+    });
+
+    /* ------------------------------------- "Agendar demonstração" */
+    // Leva ao formulário com o produto já marcado e a mensagem começada.
+    const mensagem = $('#f-mensagem', form);
+    $$('[data-produto]').forEach((botao) => botao.addEventListener('click', () => {
+      const produto = botao.dataset.produto;
+      const opcao = $(`input[name="tipo"][value="${produto}"]`, form);
+      if (opcao) opcao.checked = true;
+      if (!mensagem.value.trim()) mensagem.value = `Quero agendar uma demonstração do ${produto}.\n\n`;
+      setTimeout(() => $('#f-nome', form).focus({ preventScroll: true }), 450);
+    }));
+  }
+
+  /* -------------------------------------------------------- WhatsApp */
+  if (WHATSAPP) {
+    const texto = encodeURIComponent('Olá! Vim pelo site da Oktopus Tech e quero conversar sobre um projeto.');
+    $$('[data-whatsapp-link]').forEach((a) => { a.href = `https://wa.me/${WHATSAPP}?text=${texto}`; });
+    $$('[data-whatsapp]').forEach((el) => { el.hidden = false; });
+  }
 
   /* ------------------------------------------------------------- ano */
   const ano = $('[data-ano]');
