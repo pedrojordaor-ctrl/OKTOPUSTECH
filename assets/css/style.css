@@ -243,16 +243,10 @@ p { margin: 0; }
 .produto--checkinpass { --marca-lit: var(--checkinpass); }
 
 .produto--metryks .produto__visual { background: #000; }
-.selo-produto { width: min(100%, 340px); height: auto; border-radius: 50%; }
-
-/* cartão vertical: arte inteira em cima, texto em duas colunas embaixo */
-.produto--vertical { grid-template-columns: 1fr; }
-.produto--vertical .produto__visual { padding: 0; min-height: 0; background: #070B14; }
-.arte-produto { width: 100%; height: auto; }
-.produto--vertical .produto__texto { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem clamp(2rem, 5vw, 4rem); align-items: start; }
-.produto--vertical .produto__texto > div { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
-.produto--vertical .lista { margin: 0; padding-top: .35rem; }
-.produto--vertical .link-seta { margin-top: .5rem; }
+/* imagem que ocupa o quadro inteiro do cartão, como a foto do Backstage */
+.produto__visual:has(.foto-produto) { padding: 0; }
+.foto-produto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.produto--checkinpass .foto-produto { object-position: 42% 40%; }
 
 /* janela genérica de "tela" */
 .tela { width: 100%; max-width: 440px; border-radius: 14px; border: 1px solid rgba(255,255,255,.1); overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.5); }
@@ -279,8 +273,8 @@ p { margin: 0; }
   .produto { grid-template-columns: 1fr; }
   .produto--invertido .produto__visual { order: 0; }
   .produto__visual, .palco { min-height: 300px; }
-  .produto--vertical .produto__visual { min-height: 0; }
-  .produto--vertical .produto__texto { grid-template-columns: 1fr; }
+  .produto--checkinpass .produto__visual { min-height: 0; aspect-ratio: 3 / 2; }
+  .produto--metryks .produto__visual { min-height: 0; aspect-ratio: 1; }
 }
 
 /* -------------------------------------------------------------- projetos */
