@@ -3,7 +3,7 @@
 (() => {
   /* Número de WhatsApp da Oktopus Tech, só dígitos, com país e DDD
      (ex.: '5511999999999'). Vazio = botões de WhatsApp continuam escondidos. */
-  const WHATSAPP = '';
+  const WHATSAPP = '5511940228640';
 
   const $ = (sel, raiz = document) => raiz.querySelector(sel);
   const $$ = (sel, raiz = document) => [...raiz.querySelectorAll(sel)];
