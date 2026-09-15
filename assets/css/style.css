@@ -181,6 +181,12 @@ p { margin: 0; }
 .no rect { fill: var(--ink-1); stroke: var(--line-2); stroke-width: 1.5; transition: fill .25s, stroke .25s; }
 .no text { fill: var(--txt); font-family: var(--f-mono); font-size: 15px; text-anchor: middle; transition: fill .25s; }
 .nos a:hover .no rect, .nos a:focus .no rect, .no.ativo rect { fill: var(--coral-soft); stroke: var(--coral); }
+.no image { pointer-events: none; }
+.no text.marca { font-family: var(--f-display); font-size: 19px; font-weight: 700; letter-spacing: -.03em; fill: #fff; }
+.no text.marca--medipro { fill: #7FD3D6; }
+.no text.marca--raiz tspan { fill: #E0A057; }
+.no text.marca--holding { font-weight: 500; letter-spacing: .02em; }
+.no .marca-traco { stroke: var(--coral); stroke-width: 2; }
 .no--voce rect { fill: transparent; stroke-dasharray: 4 5; stroke: var(--txt-3); }
 .no--voce text { fill: var(--coral-lit); }
 
