@@ -297,7 +297,7 @@ p { margin: 0; }
 /* logo da casa (só os traços brancos) no centro da foto, com a foto levemente escurecida */
 .projeto--destaque .projeto__foto { overflow: hidden; }
 /* foto desfocada (a escala esconde a borda clara que o blur cria) */
-.projeto--destaque .projeto__foto img:not(.projeto__logo) { filter: blur(1.5px) saturate(1.1); transform: scale(1.04); }
+.projeto--destaque .projeto__foto img:not(.projeto__logo) { filter: blur(.75px) saturate(1.1); transform: scale(1.02); }
 .projeto--destaque .projeto__foto::after {
   content: ""; position: absolute; inset: 0;
   background:
