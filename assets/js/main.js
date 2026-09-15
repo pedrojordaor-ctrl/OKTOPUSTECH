@@ -50,35 +50,6 @@
     ['mouseleave', 'blur'].forEach((ev) => link.addEventListener(ev, () => acender(false)));
   });
 
-  /* ---------------------------------------- QR code do ingresso */
-  // Ilustração, não um QR de verdade: os três marcadores de canto e um
-  // miolo pseudoaleatório fixo, para o desenho ser sempre o mesmo.
-  const qr = $('[data-qr]');
-  if (qr) {
-    const N = 21;
-    let semente = 20260915;
-    const aleatorio = () => ((semente = (semente * 1103515245 + 12345) % 2147483648) / 2147483648);
-    const marcador = (x, y) => (px, py) => {
-      const dx = px - x, dy = py - y;
-      if (dx < 0 || dy < 0 || dx > 6 || dy > 6) return null;
-      const borda = dx === 0 || dy === 0 || dx === 6 || dy === 6;
-      const miolo = dx >= 2 && dx <= 4 && dy >= 2 && dy <= 4;
-      return borda || miolo;
-    };
-    const cantos = [marcador(0, 0), marcador(N - 7, 0), marcador(0, N - 7)];
-    let rects = '';
-    for (let y = 0; y < N; y++) {
-      for (let x = 0; x < N; x++) {
-        let cheio = null;
-        for (const c of cantos) { const r = c(x, y); if (r !== null) { cheio = r; break; } }
-        const reservado = (x <= 7 && y <= 7) || (x >= N - 8 && y <= 7) || (x <= 7 && y >= N - 8);
-        if (cheio === null) cheio = reservado ? false : aleatorio() > 0.52;
-        if (cheio) rects += `<rect x="${x}" y="${y}" width="1.02" height="1.02"/>`;
-      }
-    }
-    qr.innerHTML = rects;
-  }
-
   /* ----------------------------------------------- entrada ao rolar */
   const alvos = $$('.secao__cabeca, .produto, .projeto, .etapas li, .capacidades, .contato__texto, .formulario');
   if ('IntersectionObserver' in window && !semMovimento) {

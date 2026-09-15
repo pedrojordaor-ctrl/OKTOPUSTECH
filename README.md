@@ -1,7 +1,7 @@
 # Site da Oktopus Tech
 
 Site institucional da **Oktopus Tech**, a empresa de tecnologia por trás do
-Metryks, do Backstage e do EventPass, e dos sites e sistemas do Genuíno Bar,
+Metryks, do Backstage e do CheckinPass, e dos sites e sistemas do Genuíno Bar,
 Medipro Solutions, RaiZ e Octopus Holding S.A.
 
 HTML, CSS e JavaScript puros: sem framework, sem build — o mesmo formato do
@@ -12,7 +12,8 @@ index.html              A página inteira (uma página, com âncoras)
 assets/css/style.css    Folha de estilo única — cores e fontes no topo (:root)
 assets/js/main.js       Menu, diagrama do polvo, entrada ao rolar, formulário
 assets/img/marca.svg    Símbolo da Oktopus Tech (também é o favicon)
-assets/img/projetos/    Fotos usadas nos cartões (Backstage e Genuíno)
+assets/img/marcas/      Selo oficial do Metryks (do Brand Book)
+assets/img/projetos/    Imagens dos cartões (Backstage, CheckinPass e Genuíno)
 netlify.toml            Cabeçalhos de cache e segurança
 ```
 

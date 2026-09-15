@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Oktopus Tech — Sistemas e sites para quem opera de verdade</title>
-  <meta name="description" content="A Oktopus Tech cria plataformas SaaS, sistemas de gestão e sites: Metryks, Backstage, EventPass, Genuíno, Medipro Solutions, RaiZ e Octopus Holding S.A.">
+  <meta name="description" content="A Oktopus Tech cria plataformas SaaS, sistemas de gestão e sites: Metryks, Backstage, CheckinPass, Genuíno, Medipro Solutions, RaiZ e Octopus Holding S.A.">
   <meta name="theme-color" content="#070A12">
   <link rel="icon" href="assets/img/marca.svg?v=5" type="image/svg+xml">
 
@@ -23,7 +23,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Oktopus Tech",
-    "description": "Empresa de tecnologia responsável pelos sistemas Metryks, Backstage e EventPass.",
+    "description": "Empresa de tecnologia responsável pelos sistemas Metryks, Backstage e CheckinPass.",
     "parentOrganization": { "@type": "Organization", "name": "Octopus Holding S.A." }
   }
   </script>
@@ -93,7 +93,7 @@
             <g class="bracos">
               <path data-braco="metryks" d="M187.8 76.9 C175.8 88.9 150.5 48 124.5 48"/>
               <path data-braco="backstage" d="M372.2 76.9 C384.2 88.9 402 48 428 48"/>
-              <path data-braco="eventpass" d="M159.5 151.8 C157.5 190 140 196 122 196"/>
+              <path data-braco="checkinpass" d="M159.5 151.8 C157.5 190 158 196 140 196"/>
               <path data-braco="genuino" d="M400.5 151.8 C402.5 190 430 196 448 196"/>
               <path data-braco="medipro" d="M198.9 195 C192.9 235 110 233 110 283"/>
               <path data-braco="raiz" d="M361.1 195 C367.1 235 450 233 450 283"/>
@@ -120,7 +120,7 @@
             <g class="nos">
               <a href="#metryks"><g class="no" data-no="metryks"><rect x="19.5" y="31" width="105" height="34" rx="17"/><text x="72" y="53">Metryks</text></g></a>
               <a href="#backstage"><g class="no" data-no="backstage"><rect x="428" y="31" width="120" height="34" rx="17"/><text x="488" y="53">Backstage</text></g></a>
-              <a href="#eventpass"><g class="no" data-no="eventpass"><rect x="2" y="179" width="120" height="34" rx="17"/><text x="62" y="201">EventPass</text></g></a>
+              <a href="#checkinpass"><g class="no" data-no="checkinpass"><rect x="4" y="179" width="136" height="34" rx="17"/><text x="72" y="201">CheckinPass</text></g></a>
               <a href="#genuino"><g class="no" data-no="genuino"><rect x="448" y="179" width="100" height="34" rx="17"/><text x="498" y="201">Genuíno</text></g></a>
               <a href="#medipro"><g class="no" data-no="medipro"><rect x="60" y="283" width="100" height="34" rx="17"/><text x="110" y="305">Medipro</text></g></a>
               <a href="#raiz"><g class="no" data-no="raiz"><rect x="410" y="283" width="80" height="34" rx="17"/><text x="450" y="305">RaiZ</text></g></a>
@@ -145,11 +145,10 @@
 
           <!-- METRYKS -->
           <article class="produto produto--metryks" id="metryks">
-            <!-- Logotipo oficial, extraído do Brand Book (duotom, uso institucional).
-                 A marca não é redesenhada nem recomposta: só redimensionada. Fundo
-                 preto liso e área de proteção de 1 M em volta, como pede o manual. -->
+            <!-- Selo Metryks: a versão principal da assinatura, segundo o Brand Book.
+                 Arquivo original, só redimensionado — nada é redesenhado. -->
             <div class="produto__visual">
-              <img class="marca-produto" src="assets/img/marcas/metryks-duotom.png" alt="Metryks — Inteligência Operacional" width="800" height="181" loading="lazy">
+              <img class="selo-produto" src="assets/img/marcas/metryks-selo.jpg" alt="Selo Metryks — Inteligência Operacional" width="760" height="760" loading="lazy">
             </div>
             <div class="produto__texto">
               <p class="produto__setor">Bares e restaurantes</p>
@@ -195,36 +194,26 @@
             </div>
           </article>
 
-          <!-- EVENTPASS -->
-          <article class="produto produto--eventpass" id="eventpass">
-            <div class="produto__visual" aria-hidden="true">
-              <div class="ingresso">
-                <div class="ingresso__corpo">
-                  <small>EVENTPASS · ENTRADA</small>
-                  <strong>Noite de Lançamento</strong>
-                  <dl>
-                    <div><dt>Data</dt><dd>24 OUT</dd></div>
-                    <div><dt>Portão</dt><dd>B</dd></div>
-                    <div><dt>Setor</dt><dd>Pista</dd></div>
-                  </dl>
-                </div>
-                <div class="ingresso__canhoto">
-                  <svg class="qr" viewBox="0 0 21 21" data-qr></svg>
-                  <span class="ingresso__status">● Check-in liberado</span>
-                </div>
-              </div>
+          <!-- CHECKINPASS — a arte é larga e cheia de detalhe: vai inteira no topo
+               do cartão, sem corte, e o texto desce para baixo dela. -->
+          <article class="produto produto--checkinpass produto--vertical" id="checkinpass">
+            <div class="produto__visual">
+              <img class="arte-produto" src="assets/img/projetos/checkinpass.jpg" srcset="assets/img/projetos/checkinpass-800.jpg 800w, assets/img/projetos/checkinpass.jpg 1536w" sizes="(max-width: 1200px) 100vw, 1136px" alt="CheckinPass em uso: crachá de credencial com QR code, aplicativo de check-in no celular e totens de acesso autorizando a entrada" width="1536" height="1024" loading="lazy">
             </div>
             <div class="produto__texto">
-              <p class="produto__setor">Produtores e casas de evento</p>
-              <h3>EventPass</h3>
-              <p>Ingresso, credenciamento e controle de acesso na mesma plataforma. Do link de venda à leitura do QR code na porta, a produção acompanha quem comprou, quem entrou e quanto vendeu — em tempo real.</p>
+              <div>
+                <p class="produto__setor">Produtores e organizadores de eventos</p>
+                <h3>CheckinPass</h3>
+                <p>Sistema de credenciamento para eventos. Da lista de convidados à catraca, a produção credencia participantes, faz o check-in em segundos e acompanha a entrada em tempo real — em evento de qualquer porte.</p>
+                <a class="link-seta" href="#contato">Quero conhecer o CheckinPass</a>
+              </div>
               <ul class="lista">
-                <li>Venda de ingressos e listas por lote</li>
-                <li>Check-in por QR code direto no celular</li>
-                <li>Credenciamento de equipe, imprensa e convidados</li>
-                <li>Relatório de acesso e vendas por evento</li>
+                <li>Credencial com QR code para cada participante</li>
+                <li>Check-in rápido pelo celular ou por totem de aproximação</li>
+                <li>Lista de participantes, convites e lotes</li>
+                <li>Estatísticas de acesso em tempo real</li>
+                <li>Sincronização entre todos os pontos de entrada</li>
               </ul>
-              <a class="link-seta" href="#contato">Quero conhecer o EventPass</a>
             </div>
           </article>
 
@@ -373,7 +362,7 @@
               <label><input type="radio" name="tipo" value="Site"><span>Site</span></label>
               <label><input type="radio" name="tipo" value="Metryks"><span>Metryks</span></label>
               <label><input type="radio" name="tipo" value="Backstage"><span>Backstage</span></label>
-              <label><input type="radio" name="tipo" value="EventPass"><span>EventPass</span></label>
+              <label><input type="radio" name="tipo" value="CheckinPass"><span>CheckinPass</span></label>
             </div>
           </fieldset>
 
@@ -404,7 +393,7 @@
         <h4>Produtos</h4>
         <a href="#metryks">Metryks</a>
         <a href="#backstage">Backstage</a>
-        <a href="#eventpass">EventPass</a>
+        <a href="#checkinpass">CheckinPass</a>
       </nav>
       <nav aria-label="Projetos">
         <h4>Projetos</h4>
