@@ -1,7 +1,7 @@
 /* ==========================================================================
    Oktopus Tech — folha de estilo única
    --------------------------------------------------------------------------
-   Fundo tinta-de-polvo, um único acento coral. As cores de cada produto
+   Fundo tinta-de-polvo, um único acento laranja. As cores de cada produto
    (azul Metryks, magenta Backstage...) só aparecem dentro do cartão dele:
    a Oktopus apresenta as marcas, não se mistura com elas.
    ========================================================================== */
@@ -17,9 +17,9 @@
   --txt-2: #A6B0C0;
   --txt-3: #808B9D;      /* rótulo pequeno — 5,3:1 sobre --ink-0 */
 
-  --coral:      #FF6B4A;
-  --coral-lit:  #FF8E73;
-  --coral-soft: rgba(255, 107, 74, .12);
+  --coral:      #FF6A00;
+  --coral-lit:  #FF9533;
+  --coral-soft: rgba(255, 106, 0, .12);
 
   /* marcas dos produtos — só dentro dos cartões */
   --metryks:      #004AFE;
@@ -90,13 +90,13 @@ p { margin: 0; }
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
   min-height: 48px; padding: 0 1.4rem;
-  background: var(--coral); color: #1A0A05;
+  background: var(--coral); color: #1A0C00;
   border: 1px solid var(--coral); border-radius: 999px;
   font: 600 1rem/1 var(--f-text);
   cursor: pointer;
   transition: background .2s var(--ease), transform .2s var(--ease), box-shadow .2s var(--ease);
 }
-.btn:hover { background: var(--coral-lit); color: #1A0A05; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(255, 107, 74, .28); }
+.btn:hover { background: var(--coral-lit); color: #1A0C00; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(255, 106, 0, .28); }
 .btn--fantasma { background: transparent; color: var(--txt); border-color: var(--line-2); }
 .btn--fantasma:hover { background: var(--ink-2); color: var(--txt); box-shadow: none; }
 .btn--pequeno { min-height: 40px; padding: 0 1rem; font-size: .9375rem; }
@@ -386,7 +386,7 @@ p { margin: 0; }
 
 /* --------------------------------------------------------------- contato */
 .contato { position: relative; overflow: hidden; background: var(--ink-1); border-top: 1px solid var(--line); }
-.contato::before { content: ""; position: absolute; width: 700px; height: 700px; left: -250px; bottom: -380px; background: radial-gradient(circle, rgba(255,107,74,.16), transparent 65%); pointer-events: none; }
+.contato::before { content: ""; position: absolute; width: 700px; height: 700px; left: -250px; bottom: -380px; background: radial-gradient(circle, rgba(255, 106, 0,.16), transparent 65%); pointer-events: none; }
 .contato__grade { position: relative; display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
 .contato__texto p:last-child { margin-top: 1.25rem; color: var(--txt-2); font-size: 1.125rem; max-width: 30rem; }
 
