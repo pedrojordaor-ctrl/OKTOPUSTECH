@@ -232,6 +232,8 @@ p { margin: 0; }
 /* o do Metryks traz o descritor embaixo: um pouco mais alto, e nunca abaixo
    dos 160 px de largura que o Brand Book pede para a versão com descritor */
 .produto__logo--metryks img { height: clamp(44px, 4vw, 52px); }
+/* CheckinPass: nome recortado da arte oficial, fundo tirado */
+.produto__logo--checkinpass img { height: clamp(28px, 2.8vw, 36px); }
 .produto__texto > p:not([class]) { color: var(--txt-2); }
 .produto__texto strong { color: var(--txt); font-weight: 600; }
 .produto__setor { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; color: var(--marca-lit, var(--coral-lit)); }
