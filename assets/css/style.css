@@ -183,13 +183,13 @@ p { margin: 0; }
 .nos a:hover .no rect, .nos a:focus .no rect, .no.ativo rect { fill: var(--coral-soft); stroke: var(--coral); }
 .no image { pointer-events: none; }
 /* RaiZ e Oktopus Holding: as mesmas marcas do site da Oktopus Holding (a da RaiZ ainda é provisória, em texto). */
-.no text.marca-raiz { font: 600 20px/1 "Source Serif 4", Georgia, serif; fill: #F5F4FF; }
+.no text.marca-raiz { font: 600 30px/1 "Source Serif 4", Georgia, serif; fill: #F5F4FF; }
 .no text.marca-raiz tspan { font-weight: 500; font-style: italic; fill: #A8D08D; }
-.no text.marca-raiz__sub { font: 500 6px/1 var(--f-text); letter-spacing: .42em; text-transform: uppercase; fill: #A8D08D; }
-.no text.marca-holding { font: 600 14px/1 "Public Sans", var(--f-text); letter-spacing: .01em; text-anchor: start; fill: #fff; }
+.no text.marca-raiz__sub { font: 500 9px/1 var(--f-text); letter-spacing: .42em; text-transform: uppercase; fill: #A8D08D; }
+.no text.marca-holding { font: 600 20px/1 "Public Sans", var(--f-text); letter-spacing: .01em; text-anchor: start; fill: #fff; }
 .no text.marca-holding .marca-holding__nome { font-weight: 400; fill: #B9AEFF; }
 .no--voce rect { fill: transparent; stroke-dasharray: 4 5; stroke: var(--txt-3); }
-.no--voce text { fill: var(--coral-lit); }
+.no--voce text { fill: var(--coral-lit); font-size: 16px; }
 
 @media (prefers-reduced-motion: reduce) {
   .bracos .fluxo-braco, .brilho { animation: none; }
