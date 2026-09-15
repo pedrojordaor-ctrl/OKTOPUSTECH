@@ -181,11 +181,7 @@ p { margin: 0; }
 .no rect { fill: var(--ink-1); stroke: var(--line-2); stroke-width: 1.5; transition: fill .25s, stroke .25s; }
 .no text { fill: var(--txt); font-family: var(--f-mono); font-size: 15px; text-anchor: middle; transition: fill .25s; }
 .nos a:hover .no rect, .nos a:focus .no rect, .no.ativo rect { fill: var(--coral-soft); stroke: var(--coral); }
-.no image, .no svg { pointer-events: none; }
-.polvo .no svg { overflow: hidden; } /* recorta a logo (o svg externo é overflow: visible) */
-/* Frases de apoio das logos (Metryks, Medipro) em texto de verdade: na arte original somem de tão pequenas. */
-.no text.marca-sub { font: 500 12px/1 var(--f-text); text-anchor: start; fill: #fff; }
-.no text.marca-sub--metryks { font-size: 11px; font-weight: 600; fill: var(--metryks-lit); }
+.no image { pointer-events: none; }
 /* RaiZ e Oktopus Holding: as mesmas marcas do site da Oktopus Holding (a da RaiZ ainda é provisória, em texto). */
 .no text.marca-raiz { font: 600 30px/1 "Source Serif 4", Georgia, serif; fill: #F5F4FF; }
 .no text.marca-raiz tspan { font-weight: 500; font-style: italic; fill: #A8D08D; }
