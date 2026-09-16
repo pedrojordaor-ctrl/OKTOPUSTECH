@@ -115,7 +115,9 @@ p { margin: 0; }
 
 .logo { display: inline-flex; align-items: center; gap: .6rem; color: var(--txt); font-family: var(--f-display); font-weight: 700; font-size: 1.25rem; letter-spacing: -.02em; }
 .logo img { border-radius: 9px; }
-.logo b { font-weight: 500; color: var(--txt-2); margin-left: .3rem; }
+/* letreiro "Oktopus TECH" recortado da logo oficial, fundo transparente */
+.logo img.logo__letreiro { width: auto; height: 42px; border-radius: 0; }
+.rodape .logo img.logo__letreiro { height: 38px; }
 .logo:hover { color: var(--txt); }
 
 .menu { display: flex; align-items: center; gap: 2rem; }
