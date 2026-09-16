@@ -202,7 +202,7 @@ p { margin: 0; }
 
 /* ---------------------------------------------------------------- seções */
 .secao { padding: var(--secao-y) 0; }
-.secao--faixa { background: var(--ink-1); border-block: 1px solid var(--line); }
+.secao--faixa { background: rgba(13, 18, 29, .72); border-block: 1px solid var(--line); }
 .secao__cabeca { max-width: 44rem; margin-bottom: clamp(2.5rem, 6vw, 4.5rem); }
 .secao__cabeca > p:last-child:not(.rotulo) { margin-top: 1.25rem; color: var(--txt-2); font-size: 1.125rem; }
 
@@ -370,7 +370,7 @@ p { margin: 0; }
 @media (max-width: 520px) { .capacidades ul { grid-template-columns: 1fr; } }
 
 /* --------------------------------------------------------------- contato */
-.contato { position: relative; overflow: hidden; background: var(--ink-1); border-top: 1px solid var(--line); }
+.contato { position: relative; overflow: hidden; background: rgba(13, 18, 29, .72); border-top: 1px solid var(--line); }
 .contato__grade { position: relative; display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
 .contato__texto p:last-child { margin-top: 1.25rem; color: var(--txt-2); font-size: 1.125rem; max-width: 30rem; }
 
@@ -458,4 +458,16 @@ p { margin: 0; }
 .revelar.visivel { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .revelar { opacity: 1; transform: none; transition: none; }
+}
+
+/* ------------------------------------------------------------ fundo do site
+   Uma arte só (arcos coral e azul sobre tinta, em SVG), fixa atrás de todas as
+   seções. Fica num ::before fixo porque background-attachment: fixed
+   não funciona no Safari do iPhone. O véu escuro garante a leitura; se a
+   imagem não carregar, fica a cor de fundo de sempre. */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(7, 10, 18, .35) 0%, rgba(7, 10, 18, .55) 100%),
+    url("../img/fundo.svg") center / cover no-repeat;
 }
