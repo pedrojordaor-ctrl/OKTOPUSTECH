@@ -242,6 +242,7 @@ p { margin: 0; }
 .produto__logo--metryks img { height: clamp(44px, 4vw, 52px); }
 /* CheckinPass: nome recortado da arte oficial, fundo tirado */
 .produto__logo--checkinpass img { height: clamp(28px, 2.8vw, 36px); }
+.produto__logo--habitue img { height: clamp(36px, 3.6vw, 44px); }
 .produto__texto > p:not([class]) { color: var(--txt-2); }
 .produto__texto strong { color: var(--txt); font-weight: 600; }
 .produto__setor { font-size: .9375rem; font-weight: 600; color: var(--marca-lit, var(--coral-lit)); }
@@ -260,6 +261,7 @@ p { margin: 0; }
 .produto--metryks   { --marca-lit: var(--metryks-lit); }
 .produto--backstage { --marca-lit: #F20A76; } /* o magenta do STAGE no logotipo */
 .produto--checkinpass { --marca-lit: var(--checkinpass); }
+.produto--habitue { --marca-lit: #4F8BFF; } /* o azul do H no logotipo */
 
 .produto--metryks .produto__visual { background: #000; }
 /* imagem que ocupa o quadro inteiro do cartão, como a foto do Backstage */
@@ -270,33 +272,17 @@ p { margin: 0; }
 .produto--checkinpass .produto__visual { background: linear-gradient(#080C1A, #01030B); }
 .produto--checkinpass .foto-produto { object-fit: contain; }
 
-/* janela genérica de "tela" */
-.tela { width: 100%; max-width: 440px; border-radius: 14px; border: 1px solid rgba(255,255,255,.1); overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,.5); }
-.tela__barra { display: flex; align-items: center; gap: 6px; padding: .6rem .85rem; border-bottom: 1px solid rgba(255,255,255,.08); }
-.tela__barra span { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.18); }
-.tela__barra b { margin-left: .5rem; font: 500 .6875rem/1 var(--f-mono); letter-spacing: .08em; color: rgba(255,255,255,.55); text-transform: uppercase; }
-
-/* Backstage */
-.produto--backstage .produto__visual { padding: 0; }
-.palco { position: relative; width: 100%; height: 100%; min-height: 380px; display: grid; place-items: center; padding: clamp(1.5rem, 4vw, 3rem); }
-.palco img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 80% 50%; }
-.tela--backstage { position: relative; background: rgba(20, 8, 24, .78); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-color: rgba(229, 26, 110, .3); max-width: 360px; }
-.fluxo { list-style: none; margin: 0; padding: 14px 16px 16px; display: grid; gap: 4px; }
-.fluxo li { position: relative; display: grid; padding: 8px 0 8px 28px; }
-.fluxo li::before { content: ""; position: absolute; left: 4px; top: 13px; width: 12px; height: 12px; border-radius: 50%; border: 2px solid rgba(255,255,255,.25); background: transparent; }
-.fluxo li:not(:last-child)::after { content: ""; position: absolute; left: 9px; top: 27px; bottom: -9px; width: 2px; background: rgba(255,255,255,.12); }
-.fluxo li.feito::before { background: #7C3AED; border-color: #7C3AED; }
-.fluxo li.agora::before { background: var(--backstage); border-color: var(--backstage); box-shadow: 0 0 0 5px rgba(229, 26, 110, .25); }
-.fluxo b { font: 600 .9375rem/1.2 var(--f-text); color: #fff; }
-.fluxo small { font: .75rem/1.4 var(--f-mono); color: rgba(255,255,255,.55); }
-.fluxo li.agora small { color: #FF7FB0; }
+/* Backstage e Habitué: arte oficial quadrada, fundo do quadro na cor das bordas da arte */
+.produto--backstage .produto__visual { background: #000; }
+.produto--habitue .produto__visual { background: radial-gradient(circle, #06102E 0%, #0B1330 100%); }
+.produto--habitue .foto-produto { object-fit: contain; } /* o anel de luz vai inteiro */
 
 @media (max-width: 900px) {
   .produto { grid-template-columns: 1fr; }
   .produto--invertido .produto__visual { order: 0; }
-  .produto__visual, .palco { min-height: 300px; }
+  .produto__visual { min-height: 300px; }
   .produto--checkinpass .produto__visual { min-height: 0; aspect-ratio: 3 / 2; }
-  .produto--metryks .produto__visual { min-height: 0; aspect-ratio: 1; }
+  .produto--metryks .produto__visual, .produto--backstage .produto__visual, .produto--habitue .produto__visual { min-height: 0; aspect-ratio: 1; }
 }
 
 /* -------------------------------------------------------------- projetos */
