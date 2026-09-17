@@ -86,11 +86,12 @@
           </dl>
         </div>
 
-        <!-- O diagrama: o polvo, e da ponta de cada tentáculo sai a linha de um projeto. O oitavo braço
+        <!-- O diagrama: a Octopus Holding no alto, como a cabeça do grupo; abaixo dela o polvo,
+             e da ponta de cada tentáculo sai a linha de um projeto. O oitavo braço
              fica pontilhado — é o do próximo cliente. Cada rótulo é um link
              para o cartão do projeto. -->
-        <figure class="polvo" aria-label="Diagrama: a Oktopus Tech no centro, ligada aos seus sete projetos e a um oitavo, o seu.">
-          <svg viewBox="-106 -18 772 532" role="img" aria-hidden="true" focusable="false">
+        <figure class="polvo" aria-label="Diagrama: a Octopus Holding no alto, a Oktopus Tech no centro, ligada aos seus sete projetos e a um oitavo, o seu.">
+          <svg viewBox="-106 -122 772 636" role="img" aria-hidden="true" focusable="false">
             <defs>
               <radialGradient id="brilho" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stop-color="#FF5A28" stop-opacity=".32"/>
@@ -107,7 +108,8 @@
               <path data-braco="genuino" d="M400.5 151.8 C408 200 516 200 560 200"/>
               <path data-braco="medipro" d="M198.9 195 C192.9 262 33 258 33 320"/>
               <path data-braco="raiz" d="M361.1 195 C367.1 262 525 258 525 320"/>
-              <path data-braco="holding" d="M266.1 216.1 C260.1 300 185 382 185 450"/>
+              <path data-braco="habitue" d="M266.1 216.1 C260.1 300 185 382 185 450"/>
+              <path data-braco="holding" d="M280 -50 L280 -8"/>
               <path data-braco="voce" class="braco--voce" d="M293.9 216.1 C299.9 300 438 382 438 450"/>
             </g>
 
@@ -117,15 +119,17 @@
             </g>
 
             <!-- Cada nó mostra a logo da empresa, grande o bastante para ser lida; o retângulo encosta onde o braço termina.
-                 RaiZ e Oktopus Holding seguem as marcas do site da holding (a da RaiZ ainda é provisória, em texto). -->
+                 RaiZ e Oktopus Holding seguem as marcas do site da holding (a da RaiZ ainda é provisória, em texto).
+                 A holding fica no alto, ligada à cabeça do polvo: é ela que comanda o grupo. -->
             <g class="nos">
               <a href="#metryks" aria-label="Metryks"><g class="no" data-no="metryks"><rect x="-100" y="-10" width="178" height="56" rx="28"/><image href="assets/img/marcas/metryks-logo.png" x="-88" y="0.5" width="154" height="34.9"/></g></a>
-              <a href="#backstage" aria-label="Backstage"><g class="no" data-no="backstage"><rect x="482" y="-10" width="180" height="56" rx="28"/><image href="assets/img/marcas/backstage-logo.svg" x="494" y="5.8" width="156" height="24.4"/></g></a>
+              <a href="#backstage" aria-label="Backstage"><g class="no" data-no="backstage"><rect x="482" y="-10" width="180" height="56" rx="28"/><image href="assets/img/marcas/backstage-logo.png" x="494" y="2.8" width="156" height="30.4"/></g></a>
               <a href="#checkinpass" aria-label="CheckinPass"><g class="no" data-no="checkinpass"><rect x="-100" y="175" width="172" height="56" rx="28"/><image href="assets/img/marcas/checkinpass-logo.png" x="-89" y="192.2" width="150" height="21.6"/></g></a>
               <a href="#genuino" aria-label="Genuíno Bar"><g class="no" data-no="genuino"><rect x="560" y="150" width="100" height="100" rx="22"/><image href="assets/img/marcas/genuino-logo.png" x="568" y="159" width="84" height="81.9"/></g></a>
-              <a href="#medipro" aria-label="Medipro Solutions"><g class="no" data-no="medipro"><rect x="-40" y="320" width="146" height="60" rx="30"/><image href="assets/img/marcas/medipro-logo.png" x="-28" y="325" width="122" height="49.9"/></g></a>
+              <a href="#medipro" aria-label="Medipro Solutions"><g class="no" data-no="medipro"><rect x="-40" y="320" width="146" height="60" rx="30"/><image href="assets/img/marcas/medipro-logo.png" x="-26" y="326" width="118" height="48"/></g></a>
               <a href="#raiz" aria-label="RaiZ Eventos"><g class="no" data-no="raiz"><rect x="455" y="320" width="140" height="64" rx="32"/><text class="marca-raiz" x="525" y="355">Rai<tspan>Z</tspan></text><text class="marca-raiz__sub" x="527" y="372">eventos</text></g></a>
-              <a href="#holding" aria-label="Oktopus Holding S.A."><g class="no" data-no="holding"><rect x="40" y="450" width="290" height="60" rx="30"/><image href="assets/img/marcas/oktopus-holding-polvo.svg" x="58" y="459.5" width="48" height="41"/><text class="marca-holding" x="114" y="487">Oktopus<tspan class="marca-holding__nome" dx="5">Holding</tspan><tspan dx="5">S.A.</tspan></text></g></a>
+              <a href="#projetos" aria-label="Habitué"><g class="no" data-no="habitue"><rect x="90" y="450" width="190" height="60" rx="30"/><image href="assets/img/marcas/habitue-logo.png" x="105" y="463" width="160" height="34.2"/></g></a>
+              <a href="#holding" aria-label="Oktopus Holding S.A., a cabeça do grupo"><g class="no no--cabeca" data-no="holding"><rect x="135" y="-112" width="290" height="60" rx="30"/><image href="assets/img/marcas/oktopus-holding-polvo.svg" x="153" y="-102.5" width="48" height="41"/><text class="marca-holding" x="209" y="-75">Oktopus<tspan class="marca-holding__nome" dx="5">Holding</tspan><tspan dx="5">S.A.</tspan></text></g></a>
               <a href="#contato"><g class="no no--voce" data-no="voce"><rect x="360" y="450" width="156" height="60" rx="30"/><text x="438" y="485">o seu projeto</text></g></a>
             </g>
           </svg>
@@ -186,7 +190,7 @@
             </div>
             <div class="produto__texto">
               <p class="produto__setor">Agências de eventos</p>
-              <h3 class="produto__logo"><img src="assets/img/marcas/backstage-logo.svg" alt="Backstage" width="1375" height="215"></h3>
+              <h3 class="produto__logo"><img src="assets/img/marcas/backstage-logo.png" alt="Backstage" width="1122" height="219"></h3>
               <p>Sistema para agências de eventos. A equipe controla clientes, fornecedores, orçamentos, aprovações e fechamento em um só lugar. Clientes e fornecedores têm portal próprio e veem apenas o que é deles.</p>
               <ul class="lista">
                 <li>Três receitas separadas: valor do evento, fee e BV</li>

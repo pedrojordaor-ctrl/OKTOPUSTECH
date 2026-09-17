@@ -192,6 +192,8 @@ p { margin: 0; }
 .no text { fill: var(--txt); font-family: var(--f-mono); font-size: 15px; text-anchor: middle; transition: fill .25s; }
 .nos a:hover .no rect, .nos a:focus .no rect, .no.ativo rect { fill: var(--coral-soft); stroke: var(--coral); }
 .no image { pointer-events: none; }
+/* a holding, no alto do diagrama, ganha contorno coral: é a cabeça do grupo */
+.no--cabeca rect { stroke: var(--coral); stroke-width: 2; filter: drop-shadow(0 0 10px rgba(255, 90, 40, .45)); }
 /* RaiZ e Oktopus Holding: as mesmas marcas do site da Oktopus Holding (a da RaiZ ainda é provisória, em texto). */
 .no text.marca-raiz { font: 600 30px/1 "Source Serif 4", Georgia, serif; fill: #F5F4FF; }
 .no text.marca-raiz tspan { font-weight: 500; font-style: italic; fill: #A8D08D; }
