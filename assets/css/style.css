@@ -173,6 +173,11 @@ p { margin: 0; }
 /* diagrama do polvo */
 .polvo { margin: 0; }
 .polvo svg { width: 100%; height: auto; overflow: visible; }
+/* no computador o diagrama avança sobre a margem livre à direita:
+   os logos ficam espaçados sem encolher */
+@media (min-width: 961px) {
+  .polvo svg { width: calc(100% + clamp(0px, (100vw - 1200px) / 2, 110px)); }
+}
 
 .bracos path { fill: none; stroke: var(--line-2); stroke-width: 2; stroke-linecap: round; transition: stroke .3s; }
 .bracos path.ativo { stroke: var(--coral); }
@@ -202,7 +207,7 @@ p { margin: 0; }
 
 @media (max-width: 960px) {
   .hero__grade { grid-template-columns: 1fr; }
-  .polvo { max-width: 560px; width: 100%; margin-inline: auto; }
+  .polvo { max-width: 620px; width: 100%; margin-inline: auto; }
 }
 
 /* ---------------------------------------------------------------- seções */
