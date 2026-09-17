@@ -347,22 +347,45 @@ p { margin: 0; }
 }
 
 /* ------------------------------------------------------ como trabalhamos */
-.etapas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--line); }
-.etapas li { padding: 2rem clamp(1rem, 2vw, 1.75rem) 2rem 0; position: relative; }
-.etapas li + li { padding-left: clamp(1rem, 2vw, 1.75rem); border-left: 1px solid var(--line); }
-.etapa__n { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--coral-soft); color: var(--coral-lit); font: 700 .9375rem/1 var(--f-text); }
-.etapas h3 { margin: 1rem 0 .75rem; font-size: 1.375rem; }
-.etapas p { color: var(--txt-2); font-size: .96875rem; }
+/* Linha do tempo: uma onda laranja brilhante liga os quatro marcos.
+   Cada marco é um círculo azul aceso com o número, e o ícone logo abaixo. */
+.etapas-trilha { position: relative; --marco: 68px; --onda-h: 120px; }
+.etapas__onda {
+  position: absolute; left: 0; right: 0; top: 0; width: 100%; height: var(--onda-h);
+  overflow: visible; pointer-events: none;
+}
+.etapas__onda path { fill: none; stroke: url(#onda-cor); vector-effect: non-scaling-stroke; stroke-linecap: round; }
+.etapas__onda-linha { stroke-width: 2.5; }
+.etapas__onda-brilho { stroke-width: 10; opacity: .45; filter: blur(6px); }
 
+.etapas { position: relative; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1.25rem, 3vw, 2.5rem); }
+.etapas li { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.etapa__marco {
+  display: flex; flex-direction: column; align-items: center; gap: 1.1rem;
+  padding-top: calc((var(--onda-h) - var(--marco)) / 2);
+}
+.etapa__n {
+  display: grid; place-items: center; width: var(--marco); height: var(--marco); border-radius: 50%;
+  background: radial-gradient(circle at 50% 40%, #13265C 0%, #0A1330 70%);
+  border: 2px solid #3D7BFF;
+  box-shadow: 0 0 0 5px rgba(61, 123, 255, .14), 0 0 22px rgba(61, 123, 255, .65), inset 0 0 14px rgba(61, 123, 255, .45);
+  color: #EAF1FF; font: 700 1.125rem/1 var(--f-display); letter-spacing: .02em;
+}
+.etapa__icone {
+  width: 30px; height: 30px; fill: none; stroke: #6FA0FF; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;
+  filter: drop-shadow(0 0 6px rgba(61, 123, 255, .6));
+}
+.etapas h3 { margin: 1.25rem 0 .75rem; font-size: 1.375rem; }
+.etapas p { color: var(--txt-2); font-size: .96875rem; max-width: 17rem; }
+
+/* sem espaço para a onda cruzar os quatro marcos: os marcos ficam em grade */
 @media (max-width: 960px) {
-  .etapas { grid-template-columns: 1fr 1fr; }
-  .etapas li:nth-child(3) { padding-left: 0; border-left: 0; }
-  .etapas li:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .etapas__onda { display: none; }
+  .etapas { grid-template-columns: 1fr 1fr; row-gap: 3rem; }
+  .etapa__marco { padding-top: 0; }
 }
 @media (max-width: 560px) {
-  .etapas { grid-template-columns: 1fr; }
-  .etapas li, .etapas li + li { padding: 1.75rem 0; border-left: 0; }
-  .etapas li + li { border-top: 1px solid var(--line); }
+  .etapas { grid-template-columns: 1fr; row-gap: 2.75rem; }
 }
 
 .capacidades { margin-top: clamp(3.5rem, 8vw, 5.5rem); padding: clamp(1.75rem, 4vw, 2.75rem); border: 1px solid var(--line); border-radius: var(--r-lg); background: linear-gradient(180deg, var(--ink-1), var(--ink-0)); }

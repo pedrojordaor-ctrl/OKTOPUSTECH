@@ -298,28 +298,58 @@
           <h2>Do primeiro contato ao sistema no ar</h2>
         </header>
 
-        <ol class="etapas">
-          <li>
-            <span class="etapa__n">1</span>
-            <h3>Imersão</h3>
-            <p>Acompanhamos a rotina de quem vai usar o sistema, no salão, na portaria ou no escritório, e usamos os mesmos termos que a equipe já usa.</p>
-          </li>
-          <li>
-            <span class="etapa__n">2</span>
-            <h3>Protótipo navegável</h3>
-            <p>Antes de programar, você navega pelas telas e valida o fluxo com a sua equipe. Ajustes nessa fase são rápidos.</p>
-          </li>
-          <li>
-            <span class="etapa__n">3</span>
-            <h3>Desenvolvimento</h3>
-            <p>As regras do negócio são cobertas por testes automatizados, o que permite evoluir o sistema com segurança.</p>
-          </li>
-          <li>
-            <span class="etapa__n">4</span>
-            <h3>Publicação e suporte</h3>
-            <p>Colocamos o sistema no ar, entregamos a documentação e seguimos acompanhando depois do lançamento.</p>
-          </li>
-        </ol>
+        <!-- Linha do tempo: a onda brilhante passa pelo centro dos quatro marcos
+             (colunas em 12,5%, 37,5%, 62,5% e 87,5% da largura). -->
+        <div class="etapas-trilha">
+          <svg class="etapas__onda" viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="onda-cor" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#2F6BFF" stop-opacity="0"/>
+                <stop offset=".1" stop-color="#FF5A28"/>
+                <stop offset=".5" stop-color="#FF8C3B"/>
+                <stop offset=".9" stop-color="#FF5A28"/>
+                <stop offset="1" stop-color="#2F6BFF" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path class="etapas__onda-brilho" d="M0 98C83 98 167 22 250 22S417 98 500 98 667 22 750 22 917 98 1000 98"/>
+            <path class="etapas__onda-linha" d="M0 98C83 98 167 22 250 22S417 98 500 98 667 22 750 22 917 98 1000 98"/>
+          </svg>
+
+          <ol class="etapas">
+            <li>
+              <div class="etapa__marco">
+                <span class="etapa__n">01</span>
+                <svg class="etapa__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+              </div>
+              <h3>Imersão</h3>
+              <p>Acompanhamos a rotina de quem vai usar o sistema, no salão, na portaria ou no escritório, e usamos os mesmos termos que a equipe já usa.</p>
+            </li>
+            <li>
+              <div class="etapa__marco">
+                <span class="etapa__n">02</span>
+                <svg class="etapa__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2v.5h5V16c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3Z"/></svg>
+              </div>
+              <h3>Protótipo navegável</h3>
+              <p>Antes de programar, você navega pelas telas e valida o fluxo com a sua equipe. Ajustes nessa fase são rápidos.</p>
+            </li>
+            <li>
+              <div class="etapa__marco">
+                <span class="etapa__n">03</span>
+                <svg class="etapa__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+              </div>
+              <h3>Desenvolvimento</h3>
+              <p>As regras do negócio são cobertas por testes automatizados, o que permite evoluir o sistema com segurança.</p>
+            </li>
+            <li>
+              <div class="etapa__marco">
+                <span class="etapa__n">04</span>
+                <svg class="etapa__icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 15l-3-3c1.5-4.5 5-8 10.5-8.5C19 9 15.5 12.5 12 15ZM9 12H5l2.5-3.5H11M12 15v4l3.5-2.5V13M6.5 16.5C5 17 4 19 4 20c1 0 3-1 3.5-2.5"/><circle cx="15" cy="9" r="1.2"/></svg>
+              </div>
+              <h3>Publicação e suporte</h3>
+              <p>Colocamos o sistema no ar, entregamos a documentação e seguimos acompanhando depois do lançamento.</p>
+            </li>
+          </ol>
+        </div>
 
         <div class="capacidades">
           <h3 class="rotulo">O que fazemos</h3>
