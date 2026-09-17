@@ -381,14 +381,30 @@ p { margin: 0; }
   .etapas { grid-template-columns: 1fr; row-gap: 2.75rem; }
 }
 
-.capacidades { margin-top: clamp(3.5rem, 8vw, 5.5rem); padding: clamp(1.75rem, 4vw, 2.75rem); border: 1px solid var(--line); border-radius: var(--r-lg); background: linear-gradient(180deg, var(--ink-1), var(--ink-0)); }
-.capacidades h3.rotulo { font-size: 1.125rem; color: var(--txt); margin-bottom: 1.5rem; }
-.capacidades ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem 2rem; }
-.capacidades li { display: grid; gap: .3rem; align-content: start; }
-.capacidades b { font-family: var(--f-display); font-size: 1.1875rem; font-weight: 700; letter-spacing: -.015em; }
-.capacidades span { color: var(--txt-2); font-size: .9375rem; }
-@media (max-width: 860px) { .capacidades ul { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 520px) { .capacidades ul { grid-template-columns: 1fr; } }
+/* O que fazemos: seis cartões com ícone no laranja do polvo */
+.capacidades { margin-top: clamp(4rem, 9vw, 6.5rem); }
+.capacidades__cabeca { margin-bottom: clamp(1.75rem, 4vw, 2.5rem); }
+.capacidades__cabeca h3 { font-size: clamp(1.75rem, 3.2vw, 2.25rem); }
+.capacidades__grade { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(.875rem, 2vw, 1.25rem); }
+.capacidade {
+  position: relative; display: grid; grid-template-columns: auto 1fr; column-gap: 1rem; row-gap: .35rem; align-content: start;
+  padding: 1.5rem 1.5rem 1.6rem;
+  background: rgba(13, 18, 29, .78); border: 1px solid var(--line); border-radius: var(--r);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  transition: border-color .25s, transform .25s var(--ease), box-shadow .25s;
+}
+.capacidade:hover { border-color: rgba(255, 90, 40, .45); transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0, 0, 0, .35), 0 0 0 1px rgba(255, 90, 40, .08); }
+.capacidade__icone {
+  grid-row: span 2; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px;
+  background: linear-gradient(145deg, rgba(255, 140, 59, .18), rgba(242, 64, 31, .08));
+  border: 1px solid rgba(255, 90, 40, .3);
+}
+.capacidade__icone svg { width: 24px; height: 24px; fill: none; stroke: var(--coral-lit); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.capacidade b { align-self: end; font-family: var(--f-display); font-size: 1.1875rem; font-weight: 700; letter-spacing: -.015em; line-height: 1.2; }
+.capacidade__texto { color: var(--txt-2); font-size: .9375rem; line-height: 1.5; }
+.sem-quebra { white-space: nowrap; }
+@media (max-width: 960px) { .capacidades__grade { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .capacidades__grade { grid-template-columns: 1fr; } }
 
 /* --------------------------------------------------------------- contato */
 .contato { position: relative; overflow: hidden; background: rgba(13, 18, 29, .72); border-top: 1px solid var(--line); }
