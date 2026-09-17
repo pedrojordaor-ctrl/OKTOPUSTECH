@@ -13,7 +13,8 @@ privacidade.html        Política de privacidade (/privacidade)
 robots.txt, sitemap.xml Para o Google — trocar o endereço quando houver domínio
 assets/css/style.css    Folha de estilo única — cores e fontes no topo (:root)
 assets/js/main.js       Menu, diagrama do polvo, entrada ao rolar, formulário
-assets/img/marca-*.png  Símbolo da Oktopus Tech (favicon, ícone do iPhone e cabeçalho)
+assets/img/marca-*.png  Ícones da Oktopus Tech (favicon e atalho no celular)
+assets/img/polvo.png    Polvo da logo, fundo transparente (cabeçalho, rodapé e diagrama)
 assets/img/logo-letreiro.png  Letreiro "Oktopus TECH" da logo oficial
 assets/img/marcas/      Arte oficial do Metryks
 assets/img/projetos/    Imagens dos cartões (Backstage, CheckinPass e Genuíno)
