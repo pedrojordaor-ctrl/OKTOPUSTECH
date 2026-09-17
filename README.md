@@ -2,7 +2,7 @@
 
 Site institucional da **Oktopus Tech**, a empresa de tecnologia por trás do
 Metryks, do Backstage e do CheckinPass, e dos sites e sistemas do Genuíno Bar,
-Medipro Solutions, RaiZ e Oktopus Holding S.A.
+Medipro Solutions, RaiZ EventoZ e Oktopus Holding S.A.
 
 HTML, CSS e JavaScript puros: sem framework, sem build — o mesmo formato do
 site do Genuíno.
