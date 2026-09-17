@@ -489,13 +489,18 @@ p { margin: 0; }
 }
 
 /* ------------------------------------------------------------ fundo do site
-   Uma arte só (arcos coral e azul sobre tinta, em SVG), fixa atrás de todas as
-   seções. Fica num ::before fixo porque background-attachment: fixed
-   não funciona no Safari do iPhone. O véu escuro garante a leitura; se a
-   imagem não carregar, fica a cor de fundo de sempre. */
+   Duas artes mescladas, fixas atrás de todas as seções: a foto das ondas
+   (pontos, barras e linhas coral e azul) por baixo e os arcos em SVG por
+   cima em "screen", que só soma as luzes e deixa o escuro da foto. Fica num
+   ::before fixo porque background-attachment: fixed não funciona no Safari
+   do iPhone. O véu escuro garante a leitura; se as imagens não carregarem,
+   fica a cor de fundo de sempre. */
 body::before {
   content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(7, 10, 18, .35) 0%, rgba(7, 10, 18, .55) 100%),
-    url("../img/fundo.svg") center / cover no-repeat;
+    linear-gradient(180deg, rgba(7, 10, 18, .45) 0%, rgba(7, 10, 18, .5) 45%, rgba(7, 10, 18, .78) 100%),
+    url("../img/fundo.svg") center / cover no-repeat,
+    url("../img/fundo-ondas.jpg") center bottom / cover no-repeat,
+    var(--ink-0);
+  background-blend-mode: normal, screen, normal, normal;
 }
