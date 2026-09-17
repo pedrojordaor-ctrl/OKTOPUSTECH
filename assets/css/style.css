@@ -199,7 +199,7 @@ p { margin: 0; }
 .no text.marca-raiz tspan { font-weight: 500; font-style: italic; fill: #A8D08D; }
 .no text.marca-raiz__sub { font: 500 9px/1 var(--f-text); letter-spacing: .42em; text-transform: uppercase; fill: #A8D08D; }
 .no--voce rect { fill: transparent; stroke-dasharray: 4 5; stroke: rgba(255, 90, 40, .55); }
-.no--voce text { fill: url(#laranja-polvo); font-size: 16px; font-weight: 500; }
+.no--voce text { fill: url(#laranja-polvo); font-size: 19px; font-weight: 700; }
 
 @media (prefers-reduced-motion: reduce) {
   .bracos .fluxo-braco, .brilho { animation: none; }
