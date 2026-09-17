@@ -198,8 +198,6 @@ p { margin: 0; }
 .no text.marca-raiz { font: 600 30px/1 "Source Serif 4", Georgia, serif; fill: #F5F4FF; }
 .no text.marca-raiz tspan { font-weight: 500; font-style: italic; fill: #A8D08D; }
 .no text.marca-raiz__sub { font: 500 9px/1 var(--f-text); letter-spacing: .42em; text-transform: uppercase; fill: #A8D08D; }
-.no text.marca-holding { font: 600 20px/1 "Public Sans", var(--f-text); letter-spacing: .01em; text-anchor: start; fill: #fff; }
-.no text.marca-holding .marca-holding__nome { font-weight: 400; fill: #B9AEFF; }
 .no--voce rect { fill: transparent; stroke-dasharray: 4 5; stroke: var(--txt-3); }
 .no--voce text { fill: var(--coral-lit); font-size: 16px; }
 
@@ -338,11 +336,13 @@ p { margin: 0; }
 .janela__conteudo b { font: 700 clamp(1.6rem, 3vw, 2.1rem)/1 var(--f-display); letter-spacing: -.03em; color: #fff; }
 .janela__conteudo small { margin-top: .35rem; font: 500 .875rem/1 var(--f-text); color: rgba(255,255,255,.7); }
 
-.janela--medipro { background: linear-gradient(150deg, #0B2A3C 0%, #0E4B5C 60%, #1B7F86 130%); }
+.janela--medipro { background: radial-gradient(circle at 50% 50%, #0C2B35 0%, #04080C 75%); }
+.janela--medipro .janela__conteudo--logo { padding: 1.5rem 2rem; }
 .janela--raiz    { background: radial-gradient(circle at 85% 20%, #C8822E 0, transparent 45%), linear-gradient(160deg, #2A1B10, #4A2E17); }
-.janela--holding { background: linear-gradient(160deg, #10141F, #1C2233); }
-.janela--holding b { font-family: var(--f-display); font-weight: 500; letter-spacing: .02em; }
-.janela--holding .janela__conteudo::before { content: ""; width: 36px; height: 2px; margin-bottom: .9rem; background: var(--coral); }
+.janela--holding { background: radial-gradient(circle at 50% 40%, #121A5C 0%, #050826 70%); }
+/* o logo da holding ocupa a janela inteira, centralizado */
+.janela__conteudo--logo { min-height: 0; padding: .9rem 1.25rem; }
+.janela__conteudo--logo img { flex: 1 1 0; min-height: 0; width: 100%; height: 100%; object-fit: contain; }
 
 @media (max-width: 960px) {
   .projetos { grid-template-columns: 1fr 1fr; }
